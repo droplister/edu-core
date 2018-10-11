@@ -1,6 +1,6 @@
 <?php
 
-namespace Droplister\JobCore\Database\Seeds;
+namespace Droplister\EduCore\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
@@ -13,13 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AgencySubElementsTableSeeder::class);
-        $this->call(AgencySubElementsDataTableSeeder::class);
-        $this->call(HiringPathsTableSeeder::class);
-        $this->call(OccupationalSeriesTableSeeder::class);
-        $this->call(PayPlansTableSeeder::class);
-        $this->call(PositionSchedulesTableSeeder::class);
-        $this->call(SecurityClearancesTableSeeder::class);
-        $this->call(TravelPercentagesTableSeeder::class);
+        //
     }
 }
