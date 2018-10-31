@@ -41,7 +41,7 @@ class Location extends Model
      * @param  \Droplister\EduCore\App\PrivateSchoolSurvey  $data
      * @return \Droplister\EduCore\App\Location
      */
-    public static function firstOrCreateAddress(PrivateSchoolSurvey $data)
+    public static function firstOrCreateState(PrivateSchoolSurvey $data)
     {
         $state_abbr = $data->pstabb;
         $state_name = getStateName($state_abbr);
@@ -63,7 +63,7 @@ class Location extends Model
      * @param  \Droplister\EduCore\App\PrivateSchoolSurvey  $data
      * @return \Droplister\EduCore\App\Location
      */
-    public static function firstOrCreateAddress(Location $state, PrivateSchoolSurvey $data)
+    public static function firstOrCreateCity(Location $state, PrivateSchoolSurvey $data)
     {
         $city_name = ucwords(strtolower($data->pcity));
         $city_name = "{$city_name}, {$state->meta['abbr']}";
