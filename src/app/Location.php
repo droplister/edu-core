@@ -49,7 +49,8 @@ class Location extends Model
         return static::firstOrCreate([
             'type' => 'state',
             'name' => $state_name,
-            'title' => "Private Schools in {$state_name}", 
+        ],[
+            'title' => "Private Schools in {$state_name}",
             'meta' => [
                 'abbr' => $state_abbr,
             ],
@@ -72,6 +73,7 @@ class Location extends Model
             'parent_id' => $state->id,
             'type' => 'city',
             'name' => $city_name,
+        ],[
             'title' => "Private Schools in {$city_name}",
             'meta' => [
                 'state' => $state->meta['abbr'],
