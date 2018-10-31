@@ -26,7 +26,12 @@ class EduCoreServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole())
         {
             $this->commands([
-                //
+                App\Console\Commands\CoreCacheCommand::class,
+                App\Console\Commands\CoreClearCommand::class,
+                App\Console\Commands\CoreInstallCommand::class,
+                App\Console\Commands\CorePublishCommand::class,
+                App\Console\Commands\CoreReinstallCommand::class,
+                App\Console\Commands\CoreRefreshCommand::class,
             ]);
         }
 
