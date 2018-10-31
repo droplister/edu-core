@@ -1,6 +1,6 @@
 <?php
 
-namespace Droplister\JobCore\App\Http\Controllers\Auth;
+namespace Droplister\EduCore\App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
@@ -37,6 +37,6 @@ class ForgotPasswordController extends Controller
      */
     public function showLinkRequestForm()
     {
-        return view('job-core::auth.passwords.email');
+        return view('edu-core::auth.passwords.email');
     }
 }

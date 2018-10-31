@@ -1,6 +1,6 @@
 <?php
 
-namespace Droplister\JobCore\App\Http\Controllers\Auth;
+namespace Droplister\EduCore\App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -44,6 +44,6 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('job-core::auth.login');
+        return view('edu-core::auth.login');
     }
 }

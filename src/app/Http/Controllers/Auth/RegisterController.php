@@ -1,9 +1,9 @@
 <?php
 
-namespace Droplister\JobCore\App\Http\Controllers\Auth;
+namespace Droplister\EduCore\App\Http\Controllers\Auth;
 
 use Log, Newsletter;
-use Droplister\JobCore\App\User;
+use Droplister\EduCore\App\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -103,6 +103,6 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('job-core::auth.register');
+        return view('edu-core::auth.register');
     }
 }

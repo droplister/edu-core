@@ -1,6 +1,6 @@
 <?php
 
-namespace Droplister\JobCore\App\Http\Controllers\Auth;
+namespace Droplister\EduCore\App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -49,7 +49,7 @@ class ResetPasswordController extends Controller
      */
     public function showResetForm(Request $request, $token = null)
     {
-        return view('job-core::auth.passwords.reset')->with(
+        return view('edu-core::auth.passwords.reset')->with(
             ['token' => $token, 'email' => $request->email]
         );
     }
