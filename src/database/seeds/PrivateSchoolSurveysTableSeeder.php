@@ -5,7 +5,7 @@ namespace Droplister\EduCore\Database\Seeds;
 use Droplister\EduCore\App\PrivateSchoolSurvey;
 use Illuminate\Database\Seeder;
 
-class PrivateSchoolSurveySeeder extends Seeder
+class PrivateSchoolSurveysTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

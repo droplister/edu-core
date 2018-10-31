@@ -38,11 +38,10 @@ class School extends Model
      * First or Create School
      *
      * @param  \Droplister\EduCore\App\Location  $city
-     * @param  \Droplister\EduCore\App\Location  $state
      * @param  \Droplister\EduCore\App\PrivateSchoolSurvey  $data
      * @return \Droplister\EduCore\App\Location
      */
-    public static function firstOrCreateSchool(Location $city, Location $state, PrivateSchoolSurvey $data)
+    public static function firstOrCreateSchool(Location $city, PrivateSchoolSurvey $data)
     {
         $school_name = getSchoolName($data->pinst);
         $address = getSchoolAddress($data);

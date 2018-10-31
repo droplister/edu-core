@@ -7,7 +7,7 @@ use Droplister\EduCore\App\Location;
 use Droplister\EduCore\App\PrivateSchoolSurvey;
 use Illuminate\Database\Seeder;
 
-class SchoolsSeeder extends Seeder
+class SchoolsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -23,12 +23,10 @@ class SchoolsSeeder extends Seeder
         foreach($survey_data as $data) {
             // State
             $state = Location::firstOrCreateState($data);
-
             // City
             $city = Location::firstOrCreateCity($state, $data);
-
             // School
-            $school = School::firstOrCreateSchool($city, $state, $data);
+            $school = School::firstOrCreateSchool($city, $data);
         }
     }
 }
