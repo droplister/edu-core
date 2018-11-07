@@ -76,7 +76,8 @@ class Location extends Model
         ],[
             'title' => "Private Schools in {$city_name}",
             'meta' => [
-                'state' => $state->meta['abbr'],
+                'state_abbr' => $state->meta['abbr'],
+                'state_name' => $state->name,
             ],
         ]);
     }
