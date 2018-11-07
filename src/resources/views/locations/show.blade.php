@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('edu-core::layouts.app')
 
 @section('title', $location->title)
 
