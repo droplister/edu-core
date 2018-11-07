@@ -3,7 +3,6 @@
 @section('title', $location->title)
 
 @section('content')
-<div class="container">
     <h1 class="my-5">
         <a href="{{ url(route('locations.show', ['location' => $location->slug])) }}" class="text-dark">
             {{ $location->title }}
@@ -30,5 +29,4 @@
             {!! $schools->links() !!}
         </div>
     </div>
-</div>
 @endsection
