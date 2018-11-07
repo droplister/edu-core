@@ -16,7 +16,7 @@
                 <strong>{{ $school->meta['gender'] }} School</strong>
                 &nbsp;
             @endif
-            Students <strong>{{ $school->meta->students }}</strong>
+            Students <strong>{{ $school->meta['students'] }}</strong>
             &nbsp;
             Student-Teacher Ratio
             @if($school->meta['st_ratio'] < 1)
