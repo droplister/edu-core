@@ -32,26 +32,29 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <a class="navbar-brand mr-auto mr-lg-3" href="{{ route('home.index') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <div class="container">
+                <a class="navbar-brand mr-auto mr-lg-3" href="{{ route('home.index') }}">
+                    <i class="fa fa-university" aria-hidden="true"></i> 
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="navbar-collapse offcanvas-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item d-none d-md-inline-block">
-                        <a class="nav-link" href="{{ route('home.index') }}">
-                            {{ __('Home') }}
-                        </a>
-                    </li>
-                </ul>
+                <div class="navbar-collapse offcanvas-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item d-none d-md-inline-block">
+                            <a class="nav-link" href="{{ route('home.index') }}">
+                                {{ __('Home') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
-        <div class="nav-scroller box-shadow">
+        <div class="nav-scroller box-shadow bg-light">
             <nav class="nav nav-underline">
                 @include('edu-core::partials.subnav-left')
                 @include('edu-core::partials.subnav-right')
