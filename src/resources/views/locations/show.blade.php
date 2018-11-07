@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-9">
             @foreach($schools as $school)
-                @include('locations.partials.school')
+                @include('edu-core::partials.school')
             @endforeach
             {!! $schools->links() !!}
         </div>
