@@ -23,12 +23,12 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xs-6">
-                            <h3>Students</h3>
+                        <div class="col-6">
+                            <h4>Students</h4>
                             <span class="text-medium">{{ $school->meta['students'] }}</span>
                         </div>
-                        <div class="col-xs-6">
-                            <h3>Hours/Day</h3>
+                        <div class="col-6">
+                            <h4>Hours/Day</h4>
                             <span class="text-medium">{{ round($school->meta['hours'], 1) }}</span> HOURS
                         </div>
                     </div>
@@ -54,12 +54,12 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xs-6">
-                            <h3>Teachers</h3>
+                        <div class="col-6">
+                            <h4>Teachers</h4>
                             <span class="text-medium">{{ $school->meta['teachers'] }}</span>
                         </div>
-                        <div class="col-xs-6">
-                            <h3>S/T Ratio</h3>
+                        <div class="col-6">
+                            <h4>S/T Ratio</h4>
                             @if($school->meta['st_ratio'] < 1)
                                 <span class="text-medium">1:{{ round(1 / $school->meta['st_ratio']) }}</span>
                             @else
@@ -88,9 +88,9 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h3>Student Body</h3>
+            <div class="card">
+                <div class="card-body">
+                    <h4>Student Body</h4>
                     <span class="text-medium">{{ $school->meta['gender'] }}</span>
                     <hr />
                     <div class="progress-label">
