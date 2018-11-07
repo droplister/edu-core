@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card mb-4">
     <div class="card-body">
         <h3>
             <a href="{{ route('schools.show', ['school' => $school->slug]) }}">
