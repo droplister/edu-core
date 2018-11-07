@@ -2,6 +2,7 @@
 
 namespace Droplister\EduCore\App;
 
+use Droplister\EduCore\App\School;
 use Droplister\EduCore\App\PrivateSchoolSurvey;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +35,15 @@ class Location extends Model
     protected $casts = [
         'meta' => 'array',
     ];
+
+    public function schools()
+    {
+        if ($this->type === 'state') {
+            return $this->hasManyThrough(School::class, Location::class, 'parent_id');
+        }
+
+        return $this->hasMany(School::class);
+    }
 
     /**
      * First or Create State
