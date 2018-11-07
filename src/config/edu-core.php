@@ -1,6 +1,12 @@
 <?php
 
 return [
+
+    /**
+     * Domain Name
+     */
+    'domain' => env('EDU_CORE_DOMAIN', 'PrivateSchool.org'),
+
     /**
      * Heartbeat Url
      */

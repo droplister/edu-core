@@ -14,4 +14,8 @@
 Route::group(['middleware' => ['web']], function () {
     Auth::routes();
     Route::get('/', 'HomeController@index')->name('home.index');
+    Route::get('/about', 'PagesController@about')->name('pages.about');
+    Route::get('/disclaimer', 'PagesController@disclaimer')->name('pages.disclaimer');
+    Route::get('/privacy', 'PagesController@privacy')->name('pages.privacy');
+    Route::get('/terms', 'PagesController@terms')->name('pages.terms');
 });
