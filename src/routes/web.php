@@ -18,5 +18,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/disclaimer', 'PagesController@disclaimer')->name('pages.disclaimer');
     Route::get('/privacy', 'PagesController@privacy')->name('pages.privacy');
     Route::get('/terms', 'PagesController@terms')->name('pages.terms');
+    Route::get('/k12/{school}', 'SchoolsController@show')->name('schools.show');
     Route::get('/{location}', 'LocationsController@show')->name('locations.show');
 });
