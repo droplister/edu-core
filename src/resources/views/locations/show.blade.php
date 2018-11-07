@@ -4,20 +4,20 @@
 
 @section('content')
 <div class="container">
-    <div class="page-header">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>
-                    <a href="{{ url(route('locations.show', ['location' => $location->slug])) }}">
-                        {{ $location->title }}
-                    </a>
-                </h1>
-            </div>
-        </div>
-    </div>
-    <ol class="breadcrumb">
-        <li><a href="{{ route('home.index') }}">Home</a></li>
-        <li class="active">{{ $location->name }}</li>
+    <h1 class="my-5">
+        <a href="{{ url(route('locations.show', ['location' => $location->slug])) }}" class="text-dark">
+            {{ $location->title }}
+        </a>
+    </h1>
+    <ol class="breadcrumb bg-light">
+        <li class="breadcrumb-item">
+            <a href="{{ route('home.index') }}">
+                Home
+            </a>
+        </li>
+        <li class="breadcrumb-item active">
+            {{ $location->name }}
+        </li>
     </ol>
     <div class="row">
         <div class="col-md-3">
