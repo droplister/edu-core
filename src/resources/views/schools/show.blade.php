@@ -35,8 +35,8 @@
                         </div>
                     </div>
                     <hr />
-                    @include('partials.progress-bar', ['title' => 'Male', 'meta' => $school->meta['males']])
-                    @include('partials.progress-bar', ['title' => 'Female', 'meta' => $school->meta['females']])
+                    @include('partials.progress', ['title' => 'Male', 'meta' => $school->meta['males']])
+                    @include('partials.progress', ['title' => 'Female', 'meta' => $school->meta['females']])
                 </div>
             </div>
             <div class="card mb-4">
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                     <hr />
-                    @include('partials.progress-bar', ['title' => 'Full-Time', 'meta' => $school->meta['full_teachers']])
-                    @include('partials.progress-bar', ['title' => 'Part-Time', 'meta' => $school->meta['part_teachers']])
+                    @include('partials.progress', ['title' => 'Full-Time', 'meta' => $school->meta['full_teachers']])
+                    @include('partials.progress', ['title' => 'Part-Time', 'meta' => $school->meta['part_teachers']])
                 </div>
             </div>
         </div>
@@ -67,13 +67,13 @@
                     <h5>Student Body</h5>
                     <span class="text-medium">{{ $school->meta['gender'] }}</span>
                     <hr />
-                    @include('partials.progress-bar', ['title' => 'American Indian or Alaskan Native', 'meta' => $school->meta['indian']])
-                    @include('partials.progress-bar', ['title' => 'Asian', 'meta' => $school->meta['asian']])
-                    @include('partials.progress-bar', ['title' => 'Native Hawaiian or Pacific Islander', 'meta' => $school->meta['pacific']])
-                    @include('partials.progress-bar', ['title' => 'Hispanic', 'meta' => $school->meta['hispanic']])
-                    @include('partials.progress-bar', ['title' => 'White', 'meta' => $school->meta['white']])
-                    @include('partials.progress-bar', ['title' => 'Black', 'meta' => $school->meta['black']])
-                    @include('partials.progress-bar', ['title' => 'Two or more', 'meta' => $school->meta['two_plus']])
+                    @include('partials.progress', ['title' => 'American Indian or Alaskan Native', 'meta' => $school->meta['indian']])
+                    @include('partials.progress', ['title' => 'Asian', 'meta' => $school->meta['asian']])
+                    @include('partials.progress', ['title' => 'Native Hawaiian or Pacific Islander', 'meta' => $school->meta['pacific']])
+                    @include('partials.progress', ['title' => 'Hispanic', 'meta' => $school->meta['hispanic']])
+                    @include('partials.progress', ['title' => 'White', 'meta' => $school->meta['white']])
+                    @include('partials.progress', ['title' => 'Black', 'meta' => $school->meta['black']])
+                    @include('partials.progress', ['title' => 'Two or more', 'meta' => $school->meta['two_plus']])
                 </div>
             </div>
         </div>
