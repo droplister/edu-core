@@ -25,7 +25,9 @@
                     <div class="row">
                         <div class="col-6">
                             <h5>Students</h5>
-                            <span class="text-medium">{{ $school->meta['students'] }}</span>
+                            <span class="text-medium">
+                                {{ $school->meta['students'] }}
+                            </span>
                         </div>
                         <div class="col-6">
                             <h5>Hours/Day</h5>
@@ -33,22 +35,8 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="progress-label">
-                        Male <span class="pull-right">{{ round($school->meta['males'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['males'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['males'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['males'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Female <span class="pull-right">{{ round($school->meta['females'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['females'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['females'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['females'], 1) }}%</span>
-                        </div>
-                    </div>
+                    @include('partials.progress-bar', ['title' => 'Male', 'meta' => $school->meta['males']])
+                    @include('partials.progress-bar', ['title' => 'Female', 'meta' => $school->meta['females']])
                 </div>
             </div>
             <div class="card mb-4">
@@ -68,22 +56,8 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="progress-label">
-                        Full-Time <span class="pull-right">{{ round($school->meta['full_teachers'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['full_teachers'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['full_teachers'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['full_teachers'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Part-Time <span class="pull-right">{{ round($school->meta['part_teachers'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['part_teachers'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['part_teachers'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['part_teachers'], 1) }}%</span>
-                        </div>
-                    </div>
+                    @include('partials.progress-bar', ['title' => 'Full-Time', 'meta' => $school->meta['full_teachers']])
+                    @include('partials.progress-bar', ['title' => 'Part-Time', 'meta' => $school->meta['part_teachers']])
                 </div>
             </div>
         </div>
@@ -93,62 +67,13 @@
                     <h5>Student Body</h5>
                     <span class="text-medium">{{ $school->meta['gender'] }}</span>
                     <hr />
-                    <div class="progress-label">
-                        American Indian or Alaskan Native <span class="pull-right">{{ round($school->meta['indian'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['indian'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['indian'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['indian'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Asian <span class="pull-right">{{ round($school->meta['asian'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['asian'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['asian'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['asian'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                         Native Hawaiian or Pacific Islander <span class="pull-right">{{ round($school->meta['pacific'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['pacific'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['pacific'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['pacific'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Hispanic <span class="pull-right">{{ round($school->meta['hispanic'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['hispanic'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['hispanic'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['hispanic'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        White <span class="pull-right">{{ round($school->meta['white'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['white'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['white'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['white'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Black <span class="pull-right">{{ round($school->meta['black'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['black'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['black'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['black'], 1) }}%</span>
-                        </div>
-                    </div>
-                    <div class="progress-label">
-                        Two or more <span class="pull-right">{{ round($school->meta['two_plus'], 1) }}%</span>
-                    </div>
-                    <div class="progress mb-1">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ round($school->meta['two_plus'], 4) }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ round($school->meta['two_plus'], 4) }}%">
-                            <span class="sr-only">{{ round($school->meta['two_plus'], 1) }}%</span>
-                        </div>
-                    </div>
+                    @include('partials.progress-bar', ['title' => 'American Indian or Alaskan Native', 'meta' => $school->meta['indian']])
+                    @include('partials.progress-bar', ['title' => 'Asian', 'meta' => $school->meta['asian']])
+                    @include('partials.progress-bar', ['title' => 'Native Hawaiian or Pacific Islander', 'meta' => $school->meta['pacific']])
+                    @include('partials.progress-bar', ['title' => 'Hispanic', 'meta' => $school->meta['hispanic']])
+                    @include('partials.progress-bar', ['title' => 'White', 'meta' => $school->meta['white']])
+                    @include('partials.progress-bar', ['title' => 'Black', 'meta' => $school->meta['black']])
+                    @include('partials.progress-bar', ['title' => 'Two or more', 'meta' => $school->meta['two_plus']])
                 </div>
             </div>
         </div>
